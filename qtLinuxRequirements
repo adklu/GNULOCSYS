@@ -1,0 +1,8 @@
+
+qt 5.2.1
+
+sudo apt-get install mesa-common-dev
+sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
+
+
+libmysqlclient16
