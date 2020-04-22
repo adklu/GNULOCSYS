@@ -29,7 +29,7 @@ The dual view is perfect for translation tasks. Assign the column you want to ke
 
 Activate "History", to keep track of all changes. Or assign columns for quick input of meta information as status notes or comments for localization projects. 
 
-Example for a connection to MySQL server iside of a network:
+Example for a connection to MySQL server inside of a network:
 1)
 change in the my.cnf file (etc/mysql) the line bind-address:
 bind-address=<type here the ip of the remote server>
