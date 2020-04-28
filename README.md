@@ -40,6 +40,13 @@ sudo ufw allow in 3306/tcp
 3)
 Allow a MySQL user to access the MySQL server:
 GRANT ALL PRIVILEGES ON *.* TO '<type MySQL username here>'@'%' IDENTIFIED BY '<type password here>' WITH GRANT OPTION;
+    
+ Change  bind-address in /etc/mysql/server.cnf  or /etc/mysql/my.cnf (remove only from localhost):
+ 
+    sudo gedit /etc/mysql/mariadb.conf.d/50-server.cnf
+
+# Only allow connections from localhost  
+bind-address = 0.0.0.0
 
 
 ﻿GNULOCSYS is written by A.D.Klumpp. Copyright (C) 2016 A.D.Klumpp. GNULOCSYS is released under the terms of the GNU General Public License (v3). GNULOCSYS is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. The full copyright notice and the full license text shall be included in all copies or substantial portions of the Software.
