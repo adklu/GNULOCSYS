@@ -45,7 +45,7 @@ GRANT ALL PRIVILEGES ON *.* TO '<type MySQL username here>'@'%' IDENTIFIED BY '<
  
     sudo gedit /etc/mysql/mariadb.conf.d/50-server.cnf
 
-# Only allow connections from localhost  
+ Only allow connections from localhost:  
 bind-address = 0.0.0.0
 
 
