@@ -45,7 +45,7 @@ GRANT ALL PRIVILEGES ON *.* TO '<type MySQL username here>'@'%' IDENTIFIED BY '<
  
  
  /etc/mysql/server.cnf  
- /etc/mysql/my.cnf (remove only from localhost):
+ /etc/mysql/my.cnf (remove: "Only allow connections from localhost")
  
     sudo gedit /etc/mysql/mariadb.conf.d/50-server.cnf
 
