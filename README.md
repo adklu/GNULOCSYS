@@ -1,7 +1,7 @@
 GNULOCSYS
 Linguistic database management system
 
-GNULOCSYS is a GUI text database management system that contains complex multiple terms glossary filter systems. GNULOCSYS is not limited by the constrains of common spreadsheets. One cell of GNULOCSYS can contain a whole book and one table can contain a whole library. GNULOCSYS can be used for multiple linguistic purposes, e. g. for complex translation projects, dual editor view, external and internal search machines, advanced filter systems and multiple import/export functions that make linguistic manipulations and analysis of big texts easier. 
+GNULOCSYS is a GUI text database management system that contains complex multiple terms glossary filter systems. GNULOCSYS is not limited by the constrains of common spreadsheets. One cell of GNULOCSYS can contain a whole book and one table can contain a whole library. GNULOCSYS can be used for multiple linguistic purposes, e. g. for complex translation projects. Features are dual editor view, external and internal search machines, advanced filter systems and multiple import/export functions that make linguistic manipulations and analysis of big texts easier. 
 
 This distribution of GNULOCSYS uses the MySQL Community Edition (GPL). Install the free MySQL Community Edition (GPL) and create a MySQL user and Database (e. g. with a free GUI tool like MySQL Workbench or via command line) or use an already created MySQL database with your network or on your PC. Please refer to the MySQL documentation or ask your database administrator. 
 
