@@ -6,8 +6,11 @@ v1.9.5p
 ### Content
 
 A) REQUIRED
+
 B) INSTALL
+
 C) FIRST TIME USE
+
 D) GUI
 
 ------------------
