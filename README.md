@@ -114,7 +114,7 @@ sudo ufw allow in 3306/tcp
 
 Allow a MySQL user to access the MySQL server:
 
-GRANT ALL PRIVILEGES ON *.* TO '<type MySQL username here>'@'%' IDENTIFIED BY '<type password here>' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'type MySQL username here'@'%' IDENTIFIED BY 'type password here' WITH GRANT OPTION;
     
  
 Change  bind-address 
