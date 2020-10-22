@@ -43,8 +43,6 @@ libmariadbclient-dev
 
 libqt5sql5-mysql
 
-(e.g. with sudo apt-get install...)
-
 
 
 ### B) INSTALL
