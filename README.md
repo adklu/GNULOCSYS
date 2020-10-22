@@ -1,5 +1,59 @@
-GNULOCSYS
-Linguistic database management system
+## GNULOCSYS Linguistic database management system
+
+v1.9.5p
+
+
+### Content
+
+A) REQUIRED
+B) INSTALL
+C) FIRST TIME USE
+D) GUI
+
+------------------
+
+### A) REQUIRED
+
+Linux (tested with Debian 9 and 10)
+Qt5 (tested with Qt 5.2.1)
+qt5-default
+build-essential
+(gtk2: qt5-style-plugins: echo "export QT_QPA_PLATFORMTHEME=gtk2" >> ~/.profile) 
+qmake
+GNU Autotools (automake, autoconf, configure, make)
+(mesa-common-dev)
+(libgl1-mesa-dev, libglu1-mesa-dev)
+
+libmysqlclient
+default-libmysqlclient-dev
+libmariadbclient-dev
+libqt5sql5-mysql
+
+(e.g. with sudo apt-get install...)
+
+
+
+### B) INSTALL
+
+- Copy Source into (replace [username]): /home/[username]/GNULOCSYS
+
+- mark all .sh and .desktop files as executables
+
+- ./INSTALL.sh
+
+- Edit Desktop file (GNULOCSYS.desktop):
+
+replace [username] in:
+
+Exec=/home/[username]/GNULOCSYS/GNULOCSYS %F 
+
+Icon=/home/[username]/GNULOCSYS/Icon1.png 
+
+(To start GNULOCSYS via command (debug output in terminal): /home/[username]/GNULOCSYS/GNULOCSYS)
+
+
+
+---------------
 
 GNULOCSYS is a GUI text database management system that contains complex multiple terms glossary filter systems. GNULOCSYS is not limited by the constrains of common spreadsheets. One cell of GNULOCSYS can contain a whole book and one table can contain a whole library. GNULOCSYS can be used for multiple linguistic purposes, e. g. for complex translation projects. Features are dual editor view, external and internal search machines, advanced filter systems and multiple import/export functions that make linguistic manipulations and analysis of big texts easier. 
 
@@ -42,13 +96,9 @@ Allow a MySQL user to access the MySQL server:
 GRANT ALL PRIVILEGES ON *.* TO '<type MySQL username here>'@'%' IDENTIFIED BY '<type password here>' WITH GRANT OPTION;
     
  
- Change  bind-address 
- 
- 
+Change  bind-address 
 
- 
- 
- example:
+example:
  
  /etc/mysql/server.cnf  
  /etc/mysql/my.cnf 
@@ -58,8 +108,13 @@ GRANT ALL PRIVILEGES ON *.* TO '<type MySQL username here>'@'%' IDENTIFIED BY '<
   
  b) replace "localhost" under  "Only allow connections from localhost" with "bind-address = 0.0.0.0"
  
-   
+To connect to database via command line:   
 
+sudo mysql -h <MySql Server IP address> -u <username> -p
+
+SHOW DATABASES;
+
+SHOW TABLES;
  
 
 

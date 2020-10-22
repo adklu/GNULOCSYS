@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=GNULOCSYS
+Version=1.9.5
+GenericName=GNULOCSYS
+Comment=GNULOCSYS
+Exec=/home/[username]/GNULOCSYS/GNULOCSYS %F
+Icon=/home/[username]/GNULOCSYS/Icon1.png
+Categories=audio;Qt;
+Keywords=database;
+Terminal=false
+Type=Application
