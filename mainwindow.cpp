@@ -1,3 +1,6 @@
+//195x
+//"." added in front of all saved-data file names, in order to hide them in the home folder
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -99,7 +102,7 @@ void MainWindow::loadpressed()
     //qDebug() << "load button works";
 
 
-    QFile hfile("hfile.txt");
+    QFile hfile(".hfile.txt");
     if (!hfile.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
     QTextStream in(&hfile);
@@ -111,7 +114,7 @@ void MainWindow::loadpressed()
                 }
 
 
-    QFile prtfile("prtfile.txt");
+    QFile prtfile(".prtfile.txt");
     if (!prtfile.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
     QTextStream inprt(&prtfile);
@@ -124,7 +127,7 @@ void MainWindow::loadpressed()
 
 
 
-    QFile dfile("dfile.txt");
+    QFile dfile(".dfile.txt");
     if (!dfile.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
     QTextStream inda(&dfile);
@@ -136,7 +139,7 @@ void MainWindow::loadpressed()
                         }
 
 
-    QFile ufile("ufile.txt");
+    QFile ufile(".ufile.txt");
     if (!ufile.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
     QTextStream inus(&ufile);
@@ -248,7 +251,7 @@ void MainWindow::connectpressed()
 
 
 
-       QFile hfile("hfile.txt");
+       QFile hfile(".hfile.txt");
         if (!hfile.open(QIODevice::WriteOnly | QIODevice::Text))
             return;
 
@@ -258,7 +261,7 @@ void MainWindow::connectpressed()
         //out << host << "\n";
 
 
-        QFile prtfile("prtfile.txt");
+        QFile prtfile(".prtfile.txt");
          if (!prtfile.open(QIODevice::WriteOnly | QIODevice::Text))
              return;
 
@@ -266,7 +269,7 @@ void MainWindow::connectpressed()
          outprt << portv;
 
 
-        QFile dfile("dfile.txt");
+        QFile dfile(".dfile.txt");
          if (!dfile.open(QIODevice::WriteOnly | QIODevice::Text))
              return;
 
@@ -274,7 +277,7 @@ void MainWindow::connectpressed()
          outd << datab;
 
 
-         QFile ufile("ufile.txt");
+         QFile ufile(".ufile.txt");
           if (!ufile.open(QIODevice::WriteOnly | QIODevice::Text))
               return;
 
@@ -651,7 +654,7 @@ void MainWindow::tableS()
         {
 
           //qDebug() << datab;
-        QFile t1file("t1file.txt");
+        QFile t1file(".t1file.txt");
          if (!t1file.open(QIODevice::WriteOnly | QIODevice::Text))
              return;
 
@@ -983,7 +986,7 @@ void MainWindow::idslot()
           ui->comboBoxID->addItems(colAr);
            ui->comboBoxID->setCurrentIndex(0);
 
-          QFile hfile(tablenameS + "comboBoxID");
+          QFile hfile("." + tablenameS + "comboBoxID");
           if (!hfile.open(QIODevice::ReadOnly | QIODevice::Text))
               return;
           QTextStream in(&hfile);
@@ -1056,7 +1059,7 @@ void MainWindow::esslot()
       ui->comboBoxES->setCurrentIndex(2);
 
 
-    QFile hesfile(tablenameS + "comboBoxES");
+    QFile hesfile("." + tablenameS + "comboBoxES");
     if (!hesfile.open(QIODevice::ReadOnly | QIODevice::Text))
         return;
     QTextStream ines(&hesfile);
@@ -1115,7 +1118,7 @@ void MainWindow::tsslot()
 
 
 
-        QFile htsfile(tablenameS + "comboBoxTS");
+        QFile htsfile("." + tablenameS + "comboBoxTS");
         if (!htsfile.open(QIODevice::ReadOnly | QIODevice::Text))
             return;
         QTextStream ints(&htsfile);
@@ -1170,7 +1173,7 @@ void MainWindow::ntsslot()
 
 
 
-        QFile hNtsfile(tablenameS + "comboBoxNTS");
+        QFile hNtsfile("." + tablenameS + "comboBoxNTS");
         if (!hNtsfile.open(QIODevice::ReadOnly | QIODevice::Text))
             return;
         QTextStream inNts(&hNtsfile);
@@ -1225,7 +1228,7 @@ void MainWindow::statboxslot()
 
 
 
-        QFile hstatfile(tablenameS + "comboBoxStat");
+        QFile hstatfile("." + tablenameS + "comboBoxStat");
         if (!hstatfile.open(QIODevice::ReadOnly | QIODevice::Text))
             return;
         QTextStream instat(&hstatfile);
@@ -1281,7 +1284,7 @@ void MainWindow::comboxslot()
 
 
 
-        QFile hcomfile(tablenameS + "comboBoxCom");
+        QFile hcomfile("." + tablenameS + "comboBoxCom");
         if (!hcomfile.open(QIODevice::ReadOnly | QIODevice::Text))
             return;
         QTextStream incom(&hcomfile);
@@ -1339,7 +1342,7 @@ void MainWindow::hisboxslot()
 
 
 
-        QFile hhisfile(tablenameS + "comboBoxHis");
+        QFile hhisfile("." + tablenameS + "comboBoxHis");
         if (!hhisfile.open(QIODevice::ReadOnly | QIODevice::Text))
             return;
         QTextStream inhis(&hhisfile);
@@ -1378,7 +1381,7 @@ QString tablenameS = ui->comboBoxtables->currentText();
 //save ID settings
 QString cbID = ui->comboBoxID->currentText();
 //qDebug() << cbID;
-QFile cbIDfile(tablenameS + "comboBoxID");
+QFile cbIDfile("." + tablenameS + "comboBoxID");
        if (!cbIDfile.open(QIODevice::WriteOnly | QIODevice::Text))
            return;
 
@@ -1398,7 +1401,7 @@ QString tablenameS = ui->comboBoxtables->currentText();
 
  QString cbES = ui->comboBoxES->currentText();
  //qDebug() << cbID;
- QFile cbESfile(tablenameS + "comboBoxES");
+ QFile cbESfile("." + tablenameS + "comboBoxES");
       if (!cbESfile.open(QIODevice::WriteOnly | QIODevice::Text))
           return;
 
@@ -1418,7 +1421,7 @@ QString tablenameS = ui->comboBoxtables->currentText();
 
  QString cbTS = ui->comboBoxTS->currentText();
  //qDebug() << cbID;
- QFile cbTSfile(tablenameS + "comboBoxTS");
+ QFile cbTSfile("." + tablenameS + "comboBoxTS");
       if (!cbTSfile.open(QIODevice::WriteOnly | QIODevice::Text))
           return;
 
@@ -1437,7 +1440,7 @@ QString tablenameS = ui->comboBoxtables->currentText();
 
  QString cbNTS = ui->comboBoxNTS->currentText();
  //qDebug() << cbID;
- QFile cbNTSfile(tablenameS + "comboBoxNTS");
+ QFile cbNTSfile("." + tablenameS + "comboBoxNTS");
       if (!cbNTSfile.open(QIODevice::WriteOnly | QIODevice::Text))
           return;
 
@@ -1455,7 +1458,7 @@ void MainWindow::savehisslot()
 
      QString cbhis = ui->comboBoxHis->currentText();
      //qDebug() << cbID;
-     QFile cbhisfile(tablenameS + "comboBoxHis");
+     QFile cbhisfile("." + tablenameS + "comboBoxHis");
           if (!cbhisfile.open(QIODevice::WriteOnly | QIODevice::Text))
               return;
 
@@ -1473,7 +1476,7 @@ void MainWindow::savestatslot()
 
      QString cbstat = ui->comboBoxStat->currentText();
      //qDebug() << cbID;
-     QFile cbstatfile(tablenameS + "comboBoxStat");
+     QFile cbstatfile("." + tablenameS + "comboBoxStat");
           if (!cbstatfile.open(QIODevice::WriteOnly | QIODevice::Text))
               return;
 
@@ -1492,7 +1495,7 @@ void MainWindow::savecomslot()
 
      QString cbcom = ui->comboBoxCom->currentText();
      //qDebug() << cbID;
-     QFile cbcomfile(tablenameS + "comboBoxCom");
+     QFile cbcomfile("." + tablenameS + "comboBoxCom");
           if (!cbcomfile.open(QIODevice::WriteOnly | QIODevice::Text))
               return;
 
@@ -1510,7 +1513,7 @@ void MainWindow::SaveC1slot()
 
      QString cbc1= ui->comboBoxC1->currentText();
      //qDebug() << cbID;
-     QFile cbc1file(tablenameS + "comboBoxC1");
+     QFile cbc1file("." + tablenameS + "comboBoxC1");
           if (!cbc1file.open(QIODevice::WriteOnly | QIODevice::Text))
               return;
 
@@ -1526,7 +1529,7 @@ void MainWindow::SaveC2slot()
 
      QString cbc2 = ui->comboBoxC2->currentText();
      //qDebug() << cbID;
-     QFile cbc2file(tablenameS + "comboBoxC2");
+     QFile cbc2file("." + tablenameS + "comboBoxC2");
           if (!cbc2file.open(QIODevice::WriteOnly | QIODevice::Text))
               return;
 
@@ -1545,7 +1548,7 @@ void MainWindow::SaveC2slot()
 
           QString cbGIDs = ui->comboBoxGID->currentText();
           //qDebug() << cbID;
-          QFile cbGIDsfile(tablenameS + "comboBoxGID");
+          QFile cbGIDsfile("." + tablenameS + "comboBoxGID");
                if (!cbGIDsfile.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1561,7 +1564,7 @@ void MainWindow::SaveC2slot()
 
           QString cbGESs = ui->comboBoxGES->currentText();
           //qDebug() << cbID;
-          QFile cbGESsfile(tablenameS + "comboBoxGES");
+          QFile cbGESsfile("." + tablenameS + "comboBoxGES");
                if (!cbGESsfile.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1578,7 +1581,7 @@ void MainWindow::SaveC2slot()
 
           QString cbGTSs = ui->comboBoxGTS->currentText();
           //qDebug() << cbID;
-          QFile cbGTSsfile(tablenameS + "comboBoxGTS");
+          QFile cbGTSsfile("." + tablenameS + "comboBoxGTS");
                if (!cbGTSsfile.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1594,7 +1597,7 @@ void MainWindow::SaveC2slot()
 
           QString cbGSIDs = ui->comboBoxGSID->currentText();
           //qDebug() << cbID;
-          QFile cbGSIDsfile(tablenameS + "comboBoxGSID");
+          QFile cbGSIDsfile("." + tablenameS + "comboBoxGSID");
                if (!cbGSIDsfile.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1610,7 +1613,7 @@ void MainWindow::SaveC2slot()
 
           QString cbGSESs = ui->comboBoxGSES->currentText();
           //qDebug() << cbID;
-          QFile cbGSESsfile(tablenameS + "comboBoxGSES");
+          QFile cbGSESsfile("." + tablenameS + "comboBoxGSES");
                if (!cbGSESsfile.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1626,7 +1629,7 @@ void MainWindow::SaveC2slot()
 
           QString cbGSTSs = ui->comboBoxGSTS->currentText();
           //qDebug() << cbID;
-          QFile cbGSTSsfile(tablenameS + "comboBoxGSTS");
+          QFile cbGSTSsfile("." + tablenameS + "comboBoxGSTS");
                if (!cbGSTSsfile.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1643,7 +1646,7 @@ void MainWindow::SaveC2slot()
 
           QString cbFilter2 = ui->comboBoxFilter2->currentText();
           //qDebug() << cbID;
-          QFile cbFilter2file(tablenameS + "comboBoxFilter2");
+          QFile cbFilter2file("." + tablenameS + "comboBoxFilter2");
                if (!cbFilter2file.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1662,7 +1665,7 @@ void MainWindow::SaveC2slot()
 
           QString cbFilterG2 = ui->comboBoxFilterG2->currentText();
           //qDebug() << cbID;
-          QFile cbFilterG2file(tablenameS + "comboBoxFilterG2");
+          QFile cbFilterG2file("." + tablenameS + "comboBoxFilterG2");
                if (!cbFilterG2file.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1683,7 +1686,7 @@ void MainWindow::SaveC2slot()
 
           QString cbEQES = ui->comboBoxEQES->currentText();
           //qDebug() << cbID;
-          QFile cbEQESfile(tablenameS + "comboBoxEQES");
+          QFile cbEQESfile("." + tablenameS + "comboBoxEQES");
                if (!cbEQESfile.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1703,7 +1706,7 @@ void MainWindow::SaveC2slot()
 
           QString cbEQTS = ui->comboBoxEQTS->currentText();
           //qDebug() << cbID;
-          QFile cbEQTSfile(tablenameS + "comboBoxEQTS");
+          QFile cbEQTSfile("." + tablenameS + "comboBoxEQTS");
                if (!cbEQTSfile.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -1723,7 +1726,7 @@ void MainWindow::SaveC2slot()
 
           QString cbFilterEQ = ui->comboBoxFilterEQ->currentText();
           //qDebug() << cbID;
-          QFile cbFilterEQfile(tablenameS + "comboBoxFilterEQ");
+          QFile cbFilterEQfile("." + tablenameS + "comboBoxFilterEQ");
                if (!cbFilterEQfile.open(QIODevice::WriteOnly | QIODevice::Text))
                    return;
 
@@ -2686,7 +2689,7 @@ void MainWindow::FilterCboxslot()
 
 
 
-   QFile hc1file(tablenameS + "comboBoxC1");
+   QFile hc1file("." + tablenameS + "comboBoxC1");
           if (!hc1file.open(QIODevice::ReadOnly | QIODevice::Text))
               return;
           QTextStream inc1(&hc1file);
@@ -2706,7 +2709,7 @@ void MainWindow::FilterCboxslot()
                                }
 
 
-          QFile hc2file(tablenameS + "comboBoxC2");
+          QFile hc2file("." + tablenameS + "comboBoxC2");
           if (!hc2file.open(QIODevice::ReadOnly | QIODevice::Text))
               return;
           QTextStream inc2(&hc2file);
@@ -2769,7 +2772,7 @@ void MainWindow::Glossaryboxslot()
 
 
 
-   QFile hGSIDfile(tablenameS + "comboBoxGID");
+   QFile hGSIDfile("." + tablenameS + "comboBoxGID");
    if (!hGSIDfile.open(QIODevice::ReadOnly | QIODevice::Text))
        return;
    QTextStream inGSID(&hGSIDfile);
@@ -2791,7 +2794,7 @@ void MainWindow::Glossaryboxslot()
 
 
 
-   QFile hGSESfile(tablenameS + "comboBoxGES");
+   QFile hGSESfile("." + tablenameS + "comboBoxGES");
    if (!hGSESfile.open(QIODevice::ReadOnly | QIODevice::Text))
        return;
    QTextStream inGSES(&hGSESfile);
@@ -2814,7 +2817,7 @@ void MainWindow::Glossaryboxslot()
 
 
 
-   QFile hGSTSfile(tablenameS + "comboBoxGTS");
+   QFile hGSTSfile("." + tablenameS + "comboBoxGTS");
    if (!hGSTSfile.open(QIODevice::ReadOnly | QIODevice::Text))
        return;
    QTextStream inGSTS(&hGSTSfile);
@@ -3205,7 +3208,7 @@ void MainWindow::tableG()
         {
 
 
-        QFile t2file("t2file.txt");
+        QFile t2file(".t2file.txt");
          if (!t2file.open(QIODevice::WriteOnly | QIODevice::Text))
              return;
 
@@ -6525,7 +6528,7 @@ void MainWindow::RangeBoxslot()
 
 
 
-         QFile Filter2file(tablenameS + "comboBoxFilter2");
+         QFile Filter2file("." + tablenameS + "comboBoxFilter2");
                  if (!Filter2file.open(QIODevice::ReadOnly | QIODevice::Text))
                      return;
                  QTextStream inFilter2(&Filter2file);
@@ -6545,7 +6548,7 @@ void MainWindow::RangeBoxslot()
                                       }
 
 
-                 QFile FilterG2file(tablenameS + "comboBoxFilterG2");
+                 QFile FilterG2file("." + tablenameS + "comboBoxFilterG2");
                          if (!FilterG2file.open(QIODevice::ReadOnly | QIODevice::Text))
                              return;
                          QTextStream inFilterG2(&FilterG2file);
@@ -6575,7 +6578,7 @@ void MainWindow::RangeBoxslot()
 
 
 
-         QFile hEQESfile(tablenameS + "comboBoxEQES");
+         QFile hEQESfile("." + tablenameS + "comboBoxEQES");
                  if (!hEQESfile.open(QIODevice::ReadOnly | QIODevice::Text))
                      return;
                  QTextStream inEQES(&hEQESfile);
@@ -6595,7 +6598,7 @@ void MainWindow::RangeBoxslot()
                                       }
 
 
-                 QFile EQTSfile(tablenameS + "comboBoxEQTS");
+                 QFile EQTSfile("." + tablenameS + "comboBoxEQTS");
                          if (!EQTSfile.open(QIODevice::ReadOnly | QIODevice::Text))
                              return;
                          QTextStream inEQTS(&EQTSfile);
@@ -6629,7 +6632,7 @@ void MainWindow::RangeBoxslot()
 
 
 
-         QFile hGSIDfile(tablenameS + "comboBoxGSID");
+         QFile hGSIDfile("." + tablenameS + "comboBoxGSID");
                  if (!hGSIDfile.open(QIODevice::ReadOnly | QIODevice::Text))
                      return;
                  QTextStream inGSID(&hGSIDfile);
@@ -6654,7 +6657,7 @@ void MainWindow::RangeBoxslot()
                  //++++++++++++++++++++++++++++++
 
 
-                  QFile hGSESfile(tablenameS + "comboBoxGSES");
+                  QFile hGSESfile("." + tablenameS + "comboBoxGSES");
                           if (!hGSESfile.open(QIODevice::ReadOnly | QIODevice::Text))
                               return;
                           QTextStream inGSES(&hGSESfile);
@@ -6679,7 +6682,7 @@ void MainWindow::RangeBoxslot()
 
 
 
-                  QFile hGSTSfile(tablenameS + "comboBoxGSTS");
+                  QFile hGSTSfile("." + tablenameS + "comboBoxGSTS");
                           if (!hGSTSfile.open(QIODevice::ReadOnly | QIODevice::Text))
                               return;
                           QTextStream inGSTS(&hGSTSfile);
@@ -6730,7 +6733,7 @@ void MainWindow::morecombosaveslots()
     ui->comboBoxFilterEQ->addItems(colAr);
     ui->comboBoxFilterEQ->setCurrentIndex(0);
 
-QFile FilterEQfile(tablenameS + "comboBoxFilterEQ");
+QFile FilterEQfile("." + tablenameS + "comboBoxFilterEQ");
         if (!FilterEQfile.open(QIODevice::ReadOnly | QIODevice::Text))
             return;
         QTextStream inFilterEQ(&FilterEQfile);
