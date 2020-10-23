@@ -1,9 +1,0 @@
-gnulocsys
------------------------------------------------------
-
-ChangeLog
-
-
-1.9.5  2018-04-21  
-
-- "." added in front of all saved-data file names, in order to hide them in the home folder
