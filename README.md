@@ -65,15 +65,15 @@ Icon=/home/[username]/GNULOCSYS/Icon1.png
 
 ---------------
 
-- GUI text database management system 
-- multiple terms glossary filter
+- GUI database management system 
+- glossary filter
 - dual editor view
 - external and internal search 
 - multiple import/export functions 
 - MySQL
 - GUI to create and copy tables, add, move and copy columns/name or rename columns. 
 - non-destructive
-- import from text file (txt) or a spreadsheet (csv, xlsx via XLSX TOOL FOR GNULOCSYS) or other tables of the database. 
+- import from text file (txt) or spreadsheet (csv, xlsx via XLSX TOOL FOR GNULOCSYS) or other tables of the database. 
 - History", input of meta information, status notes, comments
 
 Example for a connection to MySQL server inside of a network:
